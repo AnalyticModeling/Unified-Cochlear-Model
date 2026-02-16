@@ -1,5 +1,3 @@
-addpath matlab_wrappers
-
 initialRun
 
 function res = cochlea_init()
@@ -56,7 +54,7 @@ end
 %   c.signal_response_heatmap(sig)
 
 % cochlea_init()
-% cochlea_at_location()
+ cochlea_at_location()
 % cochlea_wavenumber()
 % cochlea_impedance()
 % cochlea_heatmap()

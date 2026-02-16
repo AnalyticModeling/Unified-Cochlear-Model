@@ -1,4 +1,4 @@
-addpath matlab_wrappers
+initialRun
 pyenv(ExecutionMode="OutOfProcess")
 
 function fig2_2022

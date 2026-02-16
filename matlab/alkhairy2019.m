@@ -1,4 +1,4 @@
-addpath matlab_wrappers
+initialRun
 pyenv(ExecutionMode="OutOfProcess")
 % axis labeling?
 
@@ -72,4 +72,4 @@ fig3_2019
 figure
 fig6_2019
 figure
-fig8_2019
+%fig8_2019

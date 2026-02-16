@@ -35,8 +35,8 @@ def cochlea_heatmap():
   print(len(ans))
 
 if __name__ == "__main__":
-   cochlea_init()
-   cochlea_at_location()
-   cochlea_wavenumber()
-   cochlea_impedance()
+   #cochlea_init()
+   #cochlea_at_location()
+   #cochlea_wavenumber()
+   #cochlea_impedance()
    cochlea_heatmap()
