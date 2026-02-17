@@ -53,7 +53,7 @@ end
 %   sig = Signal(mode='t', data=[tones(t/100) for t in range(100000)], fs=100)
 %   c.signal_response_heatmap(sig)
 
- cochlea_init()
+  cochlea_init()
 % cochlea_at_location()
 % cochlea_wavenumber()
 % cochlea_impedance()

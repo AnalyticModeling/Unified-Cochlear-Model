@@ -32,6 +32,17 @@ if isfolder(gefsPythonFolder) && count(py.sys.path, gefsPythonFolder) == 0
     disp('GEFs Python modules linked.');
 end
 
+%% Local Project Python Bridge
+% 1. Find the 'python' folder inside your Unified-Cochlear-Model project
+% currentDir is .../Unified-Cochlear-Model/matlab, so we go up one and into /python
+localPythonFolder = fullfile(fileparts(currentDir), 'python');
+
+% 2. Add it to the Python search path
+if isfolder(localPythonFolder) && count(py.sys.path, localPythonFolder) == 0
+    insert(py.sys.path, int32(0), localPythonFolder);
+    disp('Local Cochlea Python module linked.');
+end
+
 %% Figure and Graphics Styling
 set(0, 'DefaultFigureWindowStyle', 'docked'); % Groups all plots into one window
 set(0, 'defaultFigurePosition', get(0, 'screensize')); % Makes figures full-screen

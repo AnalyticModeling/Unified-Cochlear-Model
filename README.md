@@ -71,20 +71,30 @@ This model is built as a specialized application of the GEFs Toolbox **[[Link]](
 
 ### 1. Python Environment
 The toolbox may be used in Python or MATLAB. In either case, you will need to install **Python 3.12** **[[Link]](https://www.python.org/downloads/release/python-3128/)**.
+<br>
+This can be done globally or using a virtual environment - e.g. [see here](https://dev.to/emminex/how-to-install-python-libraries-in-visual-studio-code-38i1).
 
-### 2. Installing Refactoring Branch of GEFs Toolbox (Mandatory)
-Before running this model, the **GEFs Toolbox** ( Refactoring branch ) must be installed on your device. The `Cochlea` class is built as a specialized application of the GEFs engine and cannot function without it. can be installed directly by running the following on the device terminal :
+### 2. Clone the Unified-Cochlear-Model repository For Pycharm (python IDE) and Matlab
 
-#### 2.1. Installation via Python Via Terminal (PowerShell/PyCharm)
-For users working in Python, it is highly recommended to run these commands via Terminal (PowerShell/PyCharm):
+Create new project via cloning feature and paste the repository HTTP link :
 
 ```
-pip install setuptools wheel
-pip install --no-build-isolation git+https://github.com/AnalyticModeling/GEFs.git@Refactoring
+https://github.com/AnalyticModeling/Unified-Cochlear-Model.git
 ```
 
-#### 2.2. Installation via MATLAB (command Window)
-To use the model's features within MATLAB, The GEFs toolbox Refactoring branch must be cloned :
+### 3. Installing Refactoring Branch of GEFs Toolbox (Mandatory)
+
+#### 3.1. For Python (Pycharm terminal)
+The **GEFs Toolbox** ( Refactoring branch ) must be installed on your device because The `Cochlea` class is built as a specialized application of the GEFs engine and cannot function without it. 
+It can be installed directly by running the following commands on Pycharm terminal :
+
+```
+python -m pip install --upgrade setuptools wheel
+python -m pip install --no-build-isolation git+https://github.com/AnalyticModeling/GEFs.git@Refactoring
+```
+
+#### 3.2. For MATLAB (command Window)
+To use the model's features within MATLAB, The GEFs toolbox Refactoring branch must be cloned, navigate to your project root (outside the Unified-Cochlear-Model folder) and run the following command:":
 
 ```
 !git clone -b Refactoring https://github.com/AnalyticModeling/GEFs.git
@@ -100,27 +110,33 @@ Once the folder appears in your "Current Folder" browser in MATLAB, do the follo
   <em>Important step</em>
 </p>
 
-### 3. Libraries Installation
-To install the necessary dependencies, navigate to the project folder and run the following command in your terminal:
+### 4. Libraries Installation
+To install the necessary dependencies, navigate to the project folder (Unified-Cochlear-Model folder) and run the following command in your terminal:
 
+#### 4.1. For Python (Pycharm terminal)
 ```
-$ pip install -r requirements.txt
-```
-## Cochlea Model Installation
-
-Once the GEFs Toolbox and requirements are met, follow these steps to set up the **Unified-Cochlear-Model** repository on your local machine.
-
-### Clone the Repository (For Python)
-Open your terminal and clone the project repository using the commands below (Via Terminal (PowerShell/PyCharm)):
-
-```
-git clone https://github.com/AnalyticModeling/Unified-Cochlear-Model.git
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
 ```
 
-### Clone the Repository (For MATLAB)
-Run the follwing in the command window:
+#### 4.2. For MATLAB (command Window)
 ```
-!git clone https://github.com/AnalyticModeling/Unified-Cochlear-Model.git
+!pip install -r requirements.txt
+```
+
+### Note:
+Make sure that python interpreter is 3.12 otherwise it won't work. And to make sure everything done good run this in command window of MATLAB or the terminal of Pycharm:
+
+#### For Python (Pycharm terminal)
+
+```
+pip show GEFs_core
+```
+
+#### For MATLAB (command window)
+
+```
+!pip show GEFs_core
+!pip show Cochlea.py
 ```
 
 ## Contributing
